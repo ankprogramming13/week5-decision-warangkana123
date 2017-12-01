@@ -3,22 +3,22 @@
 
 using namespace std;
 
-int main ()
-{
-    // ประกาศตัวแปรชื่อ
-    string name1, name2;
+int main() {
 
-    // รับชื่อที่ 1
-    cout << "Enter the first name: ";
+    string name1;
+
+    // รับชื่อ
+    cout << "Enter Your name: ";
     cin >> name1;
 
-    // รับชื่อที่ 2
-    cout << "Enter the second name: ";
-    cin >> name2;
-
-    // เขียนเงื่อนไขให้ถูกต้องซะ หนูๆ
-    cout << "The two names are equal" << endl;
-    cout << "The two names are not equal" << endl;
+    // แสดงชื่อ โดยตัดให้เหลือแค่ 10 ตัวอักษร
+    if (name1.length() > 10) {
+        cout << "Your name is too long!!!!" << endl;
+        name1.erase (name1.begin()+10, name1.end());
+        cout << "Your name has been changed to " << name1 << endl;
+    }else {
+    cout << name1 << endl;
+    }
 
     return 0;
 }
